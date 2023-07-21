@@ -13,5 +13,10 @@ variable "gcp_zone" {
 variable "bucket_name" {
   description = "Name of the buckets to create."
   type        = string
-  default     = "FILL IN A (UNIQUE) BUCKET NAME HERE"
+  default     = "n_bucket"
+}
+variable "vpc_name" {
+  description = "Name of the buckets to create."
+  type        = string
+  default     = "n_vpc"
 }
