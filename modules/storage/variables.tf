@@ -11,7 +11,7 @@ variable "project_id" {
 variable "location" {
   description = "The location of the bucket."
   type        = string
-  default = var.gcp_zone
+  default = "US"
 }
 variable "storage_class" {
   description = "The Storage Class of the new bucket."
