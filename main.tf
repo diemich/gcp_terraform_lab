@@ -5,6 +5,7 @@ terraform {
   required_providers {
     google = {
       source = "hashicorp/google"
+
     }
   }
 }
@@ -14,3 +15,16 @@ provider "google" {
   region       = var.gcp_region
   zone         = var.gcp_zone
 }
+module "instances" {
+  source = "./modules/instances"
+}
+module "storage" {
+  source = "./modules/storage"
+}
+#backend "gcs" {
+    #bucket  = "tf-bucket-NUMBER"
+   # prefix  = "terraform/state"
+  #}
+
+#module "firewall" {
+#  source = "./modules/networking"
