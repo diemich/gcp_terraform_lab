@@ -10,13 +10,3 @@ variable "gcp_zone" {
     description = "Selected zone for this project."
     default     = "n_zone"
 }
-variable "bucket_name" {
-  description = "Name of the buckets to create."
-  type        = string
-  default     = "n_bucket"
-}
-variable "vpc_name" {
-  description = "Name of the buckets to create."
-  type        = string
-  default     = "n_vpc"
-}

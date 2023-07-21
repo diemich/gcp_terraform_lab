@@ -1,6 +1,6 @@
 resource "google_compute_instance" "tf-instance-1" {
   name         = "tf-instance-1"
-  machine_type = "n1-standard-1"
+  machine_type = "n1-standard-2"
   zone         = var.gcp_zone
 
   boot_disk {
@@ -20,7 +20,7 @@ allow_stopping_for_update = true
 
 resource "google_compute_instance" "tf-instance-2" {
   name         = "tf-instance-2"
-  machine_type = "n1-standard-1"
+  machine_type = "n1-standard-2"
   zone         = var.gcp_zone
 
   boot_disk {
@@ -38,4 +38,22 @@ metadata_startup_script = <<-EOT
 allow_stopping_for_update = true
 }
 
+resource "google_compute_instance" "tf-instance-457034" {
+  name         = "tf-instance-457034"
+  machine_type = "n1-standard-2"
+  zone         = var.gcp_zone
 
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-10"
+    }
+  }
+
+  network_interface {
+ network = "default"
+  }
+metadata_startup_script = <<-EOT
+        #!/bin/bash
+    EOT
+allow_stopping_for_update = true
+}

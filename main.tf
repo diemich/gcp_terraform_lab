@@ -2,6 +2,10 @@
 # In the configuration above, the google provider's source is defined as hashicorp/google which is shorthand 
 #for registry.terraform.io/hashicorp/google.
 terraform {
+  #backend "gcs" {
+  #bucket  = "tf-bucket-NUMBER"
+  #prefix  = "terraform/state"
+  #}
   required_providers {
     google = {
       source = "hashicorp/google"
@@ -21,10 +25,4 @@ module "instances" {
 module "storage" {
   source = "./modules/storage"
 }
-#backend "gcs" {
-    #bucket  = "tf-bucket-NUMBER"
-   # prefix  = "terraform/state"
-  #}
 
-#module "firewall" {
-#  source = "./modules/networking"
