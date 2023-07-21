@@ -13,9 +13,9 @@ gcloud compute instances list
 #get project ID and stored it as a variable
 n_project=$(gcloud config list --format 'value(core.project)')
 n_region="us-east1"
-n_zone=""
-n_bucket=""
-n_vpc=""
+n_zone="us-east1-c"
+n_bucket="tf-bucket-602878"
+n_vpc="tf-vpc-539884"
 
 echo "replacing shell variables in terraform config files"
 #
