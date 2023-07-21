@@ -14,3 +14,19 @@ provider "google" {
   region       = var.gcp_region
   zone         = var.gcp_zone
 }
+#bucket 
+module "remote_backend_bucket" {
+  source = "./modules/storage"
+  name       = var.bucket_name
+  project_id = var.project_id
+  location   = var.gcp_zone
+  lifecycle_rules = [{
+    action = {
+      type = "Delete"
+    }
+    condition = {
+      age        = 365
+      with_state = "ANY"
+    }
+  }]
+}
