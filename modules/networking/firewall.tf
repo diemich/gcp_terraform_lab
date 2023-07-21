@@ -1,6 +1,6 @@
 resource "google_compute_firewall" "tf-firewall" {
   name    = "tf-firewall"
-  network = google_compute_network.default.name
+  network = "projects/n_project/global/networks/n_vcp"
 
   allow {
     protocol = "tcp"
