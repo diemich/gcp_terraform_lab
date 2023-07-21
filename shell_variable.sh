@@ -19,10 +19,10 @@ n_vpc="tf-vpc-539884"
 
 echo "replacing shell variables in terraform config files"
 #
-sed -i 's/$n_project/n_project/g' variables.tf
-sed -i 's/$n_region/n_region/g' variables.tf
-sed -i 's/$n_zone/n_zone/g' variables.tf
-sed -i 's/$n_bucket/n_bucket/g' variables.tf
+sed -i 's/$n_project/n_project/g' ~/gcp_terraform_lab/variables.tf
+sed -i 's/$n_region/n_region/g' ~/gcp_terraform_lab/variables.tf
+sed -i 's/$n_zone/n_zone/g' ~/gcp_terraform_lab/variables.tf
+sed -i 's/$n_bucket/n_bucket/g' ~/gcp_terraform_lab/variables.tf
 
 #copy variables to instances and storage folder
 cp ~/gcp_terraform_lab/variables.tf ~/gcp_terraform_lab/storage/
