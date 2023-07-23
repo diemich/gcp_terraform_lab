@@ -2,8 +2,8 @@ module "vpc" {
     source  = "terraform-google-modules/network/google"
     version = "~> 6.0"
 
-    project_id   = ""
-    network_name = ""
+    project_id   = "qwiklabs-gcp-04-3a1e70b5b6f1"
+    network_name = "tf-vpc-168098"
     routing_mode = "GLOBAL"
 
     subnets = [
