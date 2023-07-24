@@ -10,3 +10,5 @@ variable "gcp_zone" {
     description = "Selected zone for this project."
     default     = "n_zone"
 }
+#n_bucket
+#n_vpc
